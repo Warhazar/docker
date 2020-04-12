@@ -1,6 +1,7 @@
 FROM openjdk:14-jdk-oracle
-
-RUN yum -y update && yum -y install git && yum -y install git maven
+RUN yum -y update
+RUN yum -y install maven
+RUN yum -y install git
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git /home/lab1
 RUN cd /home/lab1
 RUN mvn package
